@@ -1,10 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello Makhtout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Stack DevOps moderne avec Jenkins, CI/CD, Docker, Kubernetes, Infrastructure as Code et observabilite." />
+  <meta name="theme-color" content="#0d1b2a" />
+  <title>DevOps Stack | Jenkins CI/CD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>kain chi floss</h1>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="hero">
+    <nav class="topbar container" aria-label="Navigation principale">
+      <div class="brand">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>DevOps Stack</span>
+      </div>
+      <button id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul id="menu" class="menu">
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#pipeline">Pipeline</a></li>
+        <li><a href="#jenkins">Jenkins</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content container">
+      <p class="kicker">Architecture moderne, rapide et scalable</p>
+      <h1>Une stack <span>DevOps</span> orientee performance avec Jenkins</h1>
+      <p class="lead">
+        CI/CD fiable, infrastructure versionnee, deploiements reproductibles et observabilite de bout en bout,
+        optimises web et mobile.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#pipeline">Voir le pipeline</a>
+        <a class="btn btn-ghost" href="#jenkins">Pourquoi Jenkins</a>
+      </div>
+      <div class="stats" role="list" aria-label="Indicateurs pipeline">
+        <article role="listitem" class="card small"><h2>Build</h2><p><strong>2m 14s</strong><span>moyenne</span></p></article>
+        <article role="listitem" class="card small"><h2>Deploy</h2><p><strong>99.95%</strong><span>disponibilite</span></p></article>
+        <article role="listitem" class="card small"><h2>Tests</h2><p><strong>1 240</strong><span>automatises</span></p></article>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="stack" class="section container">
+      <div class="section-head">
+        <p class="section-kicker">Stack complet</p>
+        <h2>Composants essentiels</h2>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Code & Qualite</h3>
+          <p>Git, revues de code, lint, tests unitaires et integration continue.</p>
+          <code>Git + Sonar + Tests</code>
+        </article>
+        <article class="card">
+          <h3>CI/CD</h3>
+          <p>Jenkins orchestre build, test, scan securite et deploiement.</p>
+          <code>Jenkinsfile + Agents</code>
+        </article>
+        <article class="card">
+          <h3>Conteneurs</h3>
+          <p>Images Docker minimalistes, versionnees et reproductibles.</p>
+          <code>Docker + Registry</code>
+        </article>
+        <article class="card">
+          <h3>Orchestration</h3>
+          <p>Deploiement blue/green ou rolling update sur Kubernetes.</p>
+          <code>K8s + Helm</code>
+        </article>
+        <article class="card">
+          <h3>Infra as Code</h3>
+          <p>Provisionnement automatise avec Terraform et policies.</p>
+          <code>Terraform + Policies</code>
+        </article>
+        <article class="card">
+          <h3>Observabilite</h3>
+          <p>Logs, metrics et traces pour diagnostiquer rapidement.</p>
+          <code>Prometheus + Grafana</code>
+        </article>
+      </div>
+    </section>
+
+    <section id="pipeline" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">CI/CD</p>
+          <h2>Pipeline Jenkins de reference</h2>
+        </div>
+        <ol class="timeline">
+          <li><strong>1.</strong> Commit & Pull Request</li>
+          <li><strong>2.</strong> Build + tests + scan SAST</li>
+          <li><strong>3.</strong> Build image Docker + push registry</li>
+          <li><strong>4.</strong> Deploiement staging + tests E2E</li>
+          <li><strong>5.</strong> Validation + promotion production</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="jenkins" class="section container">
+      <div class="section-head">
+        <p class="section-kicker">Jenkins</p>
+        <h2>Pourquoi Jenkins reste un excellent choix</h2>
+      </div>
+      <div class="two-col">
+        <article class="card">
+          <h3>Forces</h3>
+          <ul>
+            <li>Ecosysteme mature de plugins</li>
+            <li>Pipeline-as-Code (Jenkinsfile)</li>
+            <li>Agents distribuables et scalables</li>
+            <li>Integrations multiples (GitHub, GitLab, Docker, K8s)</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Bonnes pratiques</h3>
+          <ul>
+            <li>Executer Jenkins en conteneur</li>
+            <li>Limiter les privileges des agents</li>
+            <li>Cache des dependances et builds paralleles</li>
+            <li>Versionner pipelines, secrets et infra</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>DevOps Stack with Jenkins | Optimise web + mobile</p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
 </body>
+</html>
