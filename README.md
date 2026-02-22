@@ -1,4 +1,4 @@
-# Jenkins CI/CD - Build & Push Docker Image (GitHub → Docker Hub) + Deploy sur VM nommé Arbiter
+# Jenkins CI/CD - Build et Push Docker image (GitHub -> Docker hub) + Deploy sur VM nommé Arbiter
 
 ## Objectif
 Mettre en place un pipeline CI/CD simple :
@@ -50,9 +50,9 @@ Repo Docker Hub : `iniqdev/dvp_01`
 
 ## 1) Préparation VM Arbiter (Docker remote build host)
 ### 1.1 Activation Docker API TCP (2375)
-> Port 2375 = non chiffré, à limiter au réseau privé / firewall.
+> Port 2375 = non chiffré, à limiter au réseau privé / firewall
 
-Exemple (systemd override pour ajouter `-H tcp://0.0.0.0:2375`) :
+Ca: (systemd override pour ajouter `-H tcp://0.0.0.0:2375`) :
 - création d'un override systemd
 - redémarrage docker
 - vérification :
@@ -113,7 +113,7 @@ Binding dans le job :
 
 ---
 
-## 6) Pipeline shell : Build → Push → Deploy (port fixe 213)
+## 6) Pipeline shell : Build -> Push -> Deploy (port fixe 213)
 ### 6.1 Build & Push Docker image
 - Build image : `iniqdev/dvp_01:${BUILD_NUMBER}`
 - Tag `latest`
